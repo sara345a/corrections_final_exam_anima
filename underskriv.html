@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="stylesheets/underskriv_style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hvs2lnx.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/5ad841142e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>UNDERSKRIV | Anima</title>
+</head>
+
+<body>
+       <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
+       <header>
+        <div class="top_top">
+        <div class="top_component">
+          <nav id="navbar">
+            <div class="wrapper">
+            <div class="logo_container">
+              <div class="menu_toggle" id="burger_menu">
+                <span class="burger-stripe"></span>
+                <span class="burger-stripe"></span>
+                <span class="burger-stripe"></span>
+              </div>
+      
+              <div class="logo_image">
+                <a href="frontpage.html">
+                  <img
+                    id="navbar_logo"
+                    src="static_assets/Logo - Anima_HVID.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+             
+            </div>
+      
+            <div class="nav_container">
+              <div class="dropdown">
+                <li>
+                  <a href="  " class="nav_links" id="dropbtn"
+                    >OM DYRENE</a
+                  >
+                </li>
+                <div class="dropdown-content">
+                  <a href="landbrugsdyr.html">Landbrugsdyr</a>
+                  <a href="pelsdyr.html">Pelsdyr</a>
+                  <a href="forsoegsdyr.html">Forsøgsdyr</a>
+                  <a href="underholdningsdyr.html">Underholdningsdyr</a>
+                  
+                  <a href="truededyr.html">Truede dyr</a>
+                </div>
+              </div>
+      
+              <div class="dropdown">
+                <li>
+                  <a href="" class="nav_links" id="dropbtn"
+                    >GØR EN FORSKEL</a
+                  >
+                </li>
+                <div class="dropdown-content">
+                  <a href="bliv_medlem.html">Bliv medlem</a>
+                  <a href="lev_dyrevenligt.html">Lev dyrevenligt</a>
+                  <a href="underskriv.html">Underskriv</a>
+                  <a href="testamenter.html">Testamentér</a>
+                </div>
+              </div>
+      
+              <div class="dropdown">
+                <li>
+                  <a href="blog.html" class="nav_links" id="dropbtn">BLOG</a>
+                </li>
+                
+              </div>
+      
+              <div class="dropdown">
+                <li>
+                  <a href="about_us.html" class="nav_links" id="dropbtn">OM OS</a>
+                </li>
+                
+              </div>
+      
+              <div class="dropdown">
+                <li>
+                  <a href="kontakt.html" class="nav_links" id="dropbtn">KONTAKT</a>
+                </li>
+                <div class="dropdown-content">
+                  
+                </div>
+              </div>
+      
+              <div class="search_container">
+                <input  class="search" type="text" name="" placeholder="Søg...">
+               </div>
+          
+              <div class="support-button_container">
+                <a href="stoet.html">
+                <button type="button">STØT</button>
+              </a>
+              </div>
+            </div>
+          </nav>
+      </div>
+    
+    
+          <!-- Slideshow container -->
+          <div class="ss-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides">
+              <div class="picture_one"></div>
+              <div class="text">
+                <h1></h1>
+                <p></p>
+              </div>
+            </div>
+          </div>
+    </div>
+    </header>
+
+        
+
+        <main>
+          <div id="button_box">
+            <!-- <button class="filter_btn" value="landbrugsdyr" id="landbrugsdyr_button">Landbrugsdyr</button>
+            <button class="filter_btn" id="pelsdyr_button">Pelsdyr</button>
+            <button class="filter_btn" id="forsoegsdyr_button">Forsøgsdyr</button>
+            <button class="filter_btn" id="underholdningsdyr_button">Underholdningsdyr</button>
+            <button class="filter_btn" id="vilde_dyr_button">Vilde dyr</button>
+            <button class="filter_btn" id="truede_dyr_button">Truede dyr</button>
+            <button class="filter_btn" id="andet_button">andet</button> -->
+        </div>
+            
+
+            <div id="blogcontent"></div>
+
+
+            <template id="category_template">
+                <button class="filter_btn"></button>
+            </template>
+            <!--template til hvert post-->
+            <template id="post_template">
+              <article class="post_article">
+                  <div class="post_element">
+                    <div class="post-image_container">
+                      <img class="post_image"></img>
+                    </div>
+                      <div class="button-and-text_wrapper">
+                        <h2 class="post_h2"></h2>
+                        <div class="post_excerpt"></div>
+                      </div>
+                        <div class="button_box">
+                            <button class="post_button">LÆS HER</button>
+                        </div>
+                     
+  
+                  </div>
+                  <!-- <div class="mere lukket" style="display: none;">
+                  </div> -->
+              </article>
+          </template>
+
+        </main>
+
+
+        <!--footer, der er delt op i tre kolloner-->
+        <footer>
+          <div class="footer-content-wrapper">
+            <div class="column one">
+                          <img src="static_assets/Logo - Anima_HVID.png" alt="logo" />
+
+              <p>
+                Husk at du kan få fradrag for donationer til Anima på op til 17.000
+                kr.
+              </p>
+    
+              <p>CVR: 29047650</p>
+              <img
+              src="../../static_assets\recommended-charity-2020 (1).png"
+                alt=""
+              />
+            </div>
+    
+            <div class="column two">
+              <h3>LINKS</h3>
+              <hr
+                style="
+                  width: 100%;
+                  color: white;
+                  height: 1px;
+                  background-color: white;
+                "
+              />
+    
+              <a href="blog.html">Nyheder</a>
+              <a href="stoet.html">Støt</a>
+              <a href="stoet.html">Donér</a>
+              <a href="lev_dyrevenligt.html">Lev dyrevenligt</a>
+              <a href="about_us.html">Om Anima</a>
+            </div>
+    
+            <div class="column three">
+              <h3>KONTAKT OS</h3>
+              <hr
+                style="
+                  width: 100%;
+                  color: white;
+                  height: 1px;
+                  background-color: white;
+                "
+              />
+    
+              <div class="column_three_contact">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@anima.dk">info@anima.dk</a>
+              </div>
+    
+              <div class="column_three_contact">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+4535107070">+45 35 10 70 70</a>
+              </div>
+    
+              <div class="column_three_contact">
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="https://goo.gl/maps/4YCyKX39cbA4k9rt5"
+                  >Tornebuskegade 7, 1. 1131 København K
+                </a>
+              </div>
+            </div>
+    
+            <div class="column four">
+              <h3>FØLG OS</h3>
+              <hr
+                style="
+                  width: 100%;
+                  color: white;
+                  height: 1px;
+                  background-color: white;
+                "
+              />
+              <div class="column_four_some">
+                <i class="fab fa-instagram-square"></i>
+                <a href="https://www.instagram.com/animadk/?hl=da">Instagram</a>
+              </div>
+    
+              <div class="column_four_some">
+                <i class="fab fa-facebook-square"></i>
+                <a href="https://www.facebook.com/dk.anima/">Facebook</a>
+              </div>
+    
+              <div class="column_four_some">
+                <i class="fab fa-twitter-square"></i>
+                <a href="https://twitter.com/animadk">Twitter</a>
+              </div>
+    
+              <div class="column_four_some">
+                <i class="fab fa-vimeo"></i>
+                <a href="https://vimeo.com/animadk">Vimeo</a>
+              </div>
+    
+              <div class="column_four_some">
+                <i class="fab fa-youtube"></i>
+                <a href="https://www.youtube.com/user/animadanmark">Youtube</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <div class="disclaimer" style="background-color: #021424; color: #FFFFFF; margin-top: -3px;
+        position: absolute;
+        left: 0px;
+        right: 0px;">
+          <p> Denne side er udarbejdet i forbindelse med et eksamensprojekt, KEA Multimediedesigner</p>
+        </div>
+    </main>
+
+    <!--script til at indsætte indhold om blog og alle blogpostene-->
+    <script src="scripts/underskriv.js"></script>
+
+    </script>
+</body>
+
+</html>
