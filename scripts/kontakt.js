@@ -34,27 +34,28 @@ function makeNavbarSticky() {
 
 document.addEventListener("DOMContentLoaded", hentData);
 
-let template = document.querySelector("template");
-
 //Henter json data og starter forsiden (async for at få loadet json før man går videre)
+
 async function hentData() {
-    console.log("hentData");
+  console.log("hentData");
 
-    const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/96/"
-    const respons = await fetch(link);
-    const json = await respons.json();
+  const link = "https://jmotte.dk/eksamen-anima/wp-json/wp/v2/pages/96/";
 
-    //vis forsiden
-    vis(json);
+  const respons = await fetch(link);
+
+  const json = await respons.json();
+
+  //vis forsiden
+  vis(json);
 }
 
-//Indsætter data fra wordpress på rette pladser på forsiden
 async function vis(data) {
-    console.log("vis");
+  console.log("vis");
 
-    document.querySelector(".picture_one").style.backgroundImage = "url(" + data.splash1.guid + ")";
-    document.querySelector(".text h1").textContent = data.splash_overskrift1;
-    document.querySelector(".text p").textContent = data.splash_tekst1;
+  document.querySelector(".picture_one").style.backgroundImage =
+    "url(" + data.splash1.guid + ")";
+  document.querySelector(".text h1").textContent = data.splash_overskrift1;
+  document.querySelector(".text p").textContent = data.splash_tekst1;
 
 }
 
