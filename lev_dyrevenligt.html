@@ -66,7 +66,7 @@
       
               <div class="dropdown">
                 <li>
-                  <a href="" class="nav_links" id="dropbtn"
+                  <a class="nav_links" id="dropbtn"
                     >GØR EN FORSKEL</a
                   >
                 </li>
@@ -172,20 +172,23 @@
           </template>
             <!--template til hvert post-->
             <template id="post_template">
-                <article class="post_article">
-                    <div class="post_element">
-                        <img class="post_image"></img>
-                        <h2 class="post_h2"></h2>
+              <article class="post_article">
+                  <div class="post_element">
+                    <div class="post-image_container">
+                      <img class="post_image"></img>
+                    </div>
+                      <div class="button-and-text_wrapper">
+                        <h3 class="post_h2"></h3>
                         <div class="post_excerpt"></div>
+                      </div>
                         <div class="button_box">
                             <button class="post_button">LÆS HER</button>
                         </div>
-    
-                    </div>
-                    <!-- <div class="mere lukket" style="display: none;">
-                    </div> -->
-                </article>
-            </template>
+                  </div>
+                  <!-- <div class="mere lukket" style="display: none;">
+                  </div> -->
+              </article>
+          </template>
 
         </main>
 

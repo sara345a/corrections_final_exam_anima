@@ -35,6 +35,8 @@ body,
 
 html {
   overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: context-menu;
 }
 
 h1,
@@ -111,13 +113,13 @@ header .menu_toggle .burger-stripe {
   background: var(--color-grey);
 }
 
-header .dropdown {
-  position: relative;
+.dropdown {
+  /* position: relative; */
   display: inline-block;
   padding: 8px;
 }
 
-header .dropdown-content {
+.dropdown-content {
   display: none;
   position: absolute;
   background: var(--color-red);
@@ -126,6 +128,7 @@ header .dropdown-content {
   box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
   margin-left: -3px;
   margin-top: 7px;
+  z-index: 1;
 }
 
 header .dropdown-content a {
@@ -233,11 +236,6 @@ h2 {
 p {
   font-size: clamp(0.75rem, 3vw - 0.25rem, 0.938rem);
   line-height: clamp(1.25rem, 2vw + 0.5rem, 1.438rem);
-}
-
-#form #flow_steps {
-  font-size: clamp(0.75rem, 1vw + 0.5rem, 0.938rem);
-  white-space: nowrap;
 }
 /*----font sizes end------*/
 img {
@@ -520,12 +518,16 @@ main #icons_box p {
 }
 
 /*----two third------*/
+
 .two-third_wrapper {
   display: flex;
   flex-direction: column;
+  padding: 40px 20px;
   justify-content: center;
   align-items: center;
   background-color: var(--color-icyblue);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .two-third_right {
@@ -535,7 +537,13 @@ main #icons_box p {
   align-items: center;
   text-align: start;
   padding: 30px 20px;
-  gap: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.two-third_wrapper .subheader {
+  text-align: start;
+  align-self: flex-start;
+  padding: 20px 0px;
 }
 
 .two-third_right .paragraph {
@@ -543,18 +551,20 @@ main #icons_box p {
 }
 
 .two-third_left {
+  display: flex;
   min-height: 340px;
   width: 100%;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .two-third_image {
   display: flex;
   justify-content: center;
-  height: 100%;
 }
 
-.two-third img {
+.two-third_image img {
   border-radius: 10px;
+  max-height: 100%;
 }
 
 .two-third-button_container {
@@ -562,16 +572,23 @@ main #icons_box p {
   flex-direction: column;
   gap: 10px;
   padding-top: 30px;
+  justify-content: center;
 }
 
 .two-third .read-more_button,
 .two-third .donate_button {
   width: 200px;
 }
+
 .two-third .donate_button {
   background-color: transparent;
   border: 3px solid var(--color-red);
   color: var(--color-red);
+  padding: 7px;
+}
+.two-third .donate_button:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
 }
 
 /*------------------------------------------------------------------------------------*/
@@ -807,8 +824,11 @@ footer .column a:hover {
     padding: 10px;
   }
 
-  .two-third_wrapper {
-    padding: 80px;
+  .two-third {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 950px;
   }
 
   .two-third_left {
@@ -816,6 +836,7 @@ footer .column a:hover {
   }
   .two-third_right {
     flex: 1 1 60%;
+    border-radius: 0px 10px 10px 0px;
   }
 
   .two-third-button_container {
@@ -881,7 +902,11 @@ footer .column a:hover {
   }
 
   .two-third_right {
-    padding: 40px;
+    padding: 80px;
+  }
+
+  .two-third_left {
+    padding: 80px 0px;
   }
 
   .two-third {

@@ -19,6 +19,8 @@ body,
 
 html {
   overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: context-menu;
 }
 
 h1,
@@ -103,8 +105,8 @@ header .menu_toggle .burger-stripe {
   background: var(--color-grey);
 }
 
-header .dropdown {
-  position: relative;
+.dropdown {
+  /* position: relative; */
   display: inline-block;
   padding: 8px;
 }
@@ -118,6 +120,7 @@ header .dropdown {
   box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
   margin-left: -3px;
   margin-top: 7px;
+  z-index: 1;
 }
 
 .dropdown-content a {
@@ -281,14 +284,11 @@ header .text button {
   align-self: center;
 }
 
-.filter_btn:hover {
-  background-color: unset;
-  color: var(--color-red);
-}
-
+.filter_btn:hover,
+.filter_btn:focus,
 .filter_btn:active {
-  background-color: unset;
-  color: unset;
+  background-color: transparent;
+  color: rgb(186, 89, 89);
 }
 
 #button_box {
@@ -319,7 +319,7 @@ main .post_article {
 }
 
 main .button-and-text_wrapper {
-  padding: 20px;
+  padding: 20px 20px 0px;
   flex: 1 1;
 }
 
@@ -349,8 +349,8 @@ main .post_image img {
 }
 
 main .button_box button:hover {
-  color: var(--color-darkerblue) !important;
-  background-color: var(--color-white) !important;
+  color: var(--color-white) !important;
+  background-color: #ac3c36 !important;
 }
 
 /*------------------------------------------------------------------------------------*/

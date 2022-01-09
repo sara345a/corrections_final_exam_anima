@@ -10,6 +10,15 @@
   --heading: montserrat, sans-serif;
   --paragraph: work-sans, sans-serif;
   --box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
+
+  --shadow-color: 0deg 0% 0%;
+  --shadow-elevation-low: -0.1px 0.3px 0.5px hsl(var(--shadow-color) / 0),
+    -0.2px 1px 1.5px hsl(var(--shadow-color) / 0.1);
+  --shadow-elevation-medium: 0.1px 0.2px 0.3px hsl(var(--shadow-color) / 0),
+    1.4px 4px 6.4px hsl(var(--shadow-color) / 0.23);
+  --shadow-elevation-high: -0.1px 0.3px 0.5px hsl(var(--shadow-color) / 0),
+    -1.5px 6.3px 9.7px hsl(var(--shadow-color) / 0.11),
+    -4.6px 19.5px 30.1px hsl(var(--shadow-color) / 0.22);
 }
 body,
 #navbar {
@@ -19,6 +28,8 @@ body,
 
 html {
   overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: context-menu;
 }
 
 h1,
@@ -111,7 +122,7 @@ img#navbar_logo:hover {
 }
 
 .dropdown {
-  position: relative;
+  /* position: relative; */
   display: inline-block;
   padding: 8px;
 }
@@ -125,6 +136,7 @@ img#navbar_logo:hover {
   box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
   margin-left: -3px;
   margin-top: 7px;
+  z-index: 1;
 }
 
 .dropdown-content a {
@@ -153,17 +165,15 @@ button {
   background-color: var(--color-red);
   border: none;
   border-radius: 10px;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--shadow-elevation-medium);
   width: 90px;
   padding: 10px;
   cursor: pointer;
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   overflow: hidden;
   transition-duration: 0.3s;
   transition-property: color, background-color;
   font-weight: bold;
-  white-space: nowrap;
 }
 
 button:hover,
@@ -431,17 +441,21 @@ img {
   justify-content: center;
 }
 
-.two-third-button_container button {
-  width: 189px;
-  align-self: flex-start;
-  min-height: 10px;
-  max-height: 35px;
+.two-third .read-more_button,
+.two-third .donate_button {
+  width: 200px;
 }
 
-.special_button {
+.two-third .donate_button {
   background-color: transparent;
-  border: solid 3px var(--color-red);
+  border: 3px solid var(--color-red);
   color: var(--color-red);
+  padding: 7px;
+}
+
+.two-third .donate_button:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
 }
 
 /*----newsletter------*/
@@ -483,6 +497,8 @@ img {
 
 .newsletter_wrapper button {
   width: 100%;
+  white-space: nowrap;
+  padding: 0px 15px;
 }
 .newsletter_input {
   padding: 8px;
@@ -732,7 +748,7 @@ footer .column a:hover {
   }
 
   .newsletter_wrapper button {
-    max-width: 25%;
+    max-width: 35%;
   }
 
   .dots {
@@ -760,7 +776,7 @@ footer .column a:hover {
   }
 
   .call-to-action_option {
-    height: 350px;
+    height: 390px;
   }
 
   .two-third-button_container {
