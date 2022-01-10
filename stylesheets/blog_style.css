@@ -267,7 +267,6 @@ header .text {
   position: absolute;
   bottom: 90px;
   text-align: center;
-  left: 20px;
 }
 
 header .text button {
@@ -297,14 +296,11 @@ header .text button {
   align-self: center;
 }
 
-.filter_btn:hover {
-  background-color: unset;
-  color: var(--color-red);
-}
-
+.filter_btn:hover,
+.filter_btn:focus,
 .filter_btn:active {
-  background-color: unset;
-  color: unset;
+  background-color: transparent;
+  color: rgb(186, 89, 89);
 }
 
 #button_box {
@@ -362,11 +358,6 @@ main .post_image {
 
 main .post_image img {
   border-radius: 0% 0% 0% 0%;
-}
-
-main .button_box button:hover {
-  color: var(--color-darkerblue) !important;
-  background-color: var(--color-white) !important;
 }
 
 /*------------------------------------------------------------------------------------*/
@@ -533,6 +524,7 @@ footer .column a:hover {
   main #blogcontent {
     margin: auto;
     padding: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
   }
 
   #button_box {
@@ -589,6 +581,10 @@ footer .column a:hover {
   footer .footer-content-wrapper {
     justify-content: space-evenly;
   }
+
+  main #blogcontent {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 4fr));
+  }
 }
 
 /*----laptop large------*/
@@ -612,5 +608,9 @@ footer .column a:hover {
 
   header .nav_container button {
     height: 34px;
+  }
+
+  main #blogcontent {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 4fr));
   }
 }

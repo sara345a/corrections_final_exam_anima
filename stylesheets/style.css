@@ -155,7 +155,9 @@ img#navbar_logo:hover {
   display: block;
 }
 
-.nav_links:hover {
+.nav_links:hover,
+.nav_links:focus,
+.nav_links:active {
   color: rgb(199, 199, 199);
   transition: all 0.1s ease-out;
 }
@@ -324,7 +326,6 @@ img {
   position: absolute;
   bottom: 90px;
   text-align: center;
-  left: 20px;
 }
 
 .text button {
