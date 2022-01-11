@@ -418,6 +418,7 @@ footer .column a:hover {
     transition: all 0.5s ease;
     padding: 2vh;
     z-index: 30;
+    max-width: 250px;
   }
 
   header .nav_links:hover {
@@ -474,11 +475,6 @@ footer .column a:hover {
     left: 20px;
   }
 
-  header .nav_container.active {
-    width: 30%;
-    max-height: 10px;
-  }
-
   header .text {
     bottom: 100px;
     text-align: unset;
@@ -519,6 +515,13 @@ footer .column a:hover {
 
   footer .footer-content-wrapper {
     justify-content: space-evenly;
+  }
+
+  main .testamenter_button {
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+    margin-left: 40px;
   }
 }
 
@@ -584,6 +587,10 @@ footer .column a:hover {
     margin-top: 0%;
     margin-bottom: 5%;
   }
+
+  main .testamenter_button {
+    margin-left: 50px;
+  }
 }
 
 /*----laptop large------*/
@@ -603,5 +610,9 @@ footer .column a:hover {
   header .search {
     width: 90px;
     margin-right: 10px;
+  }
+
+  main .testamenter_button {
+    margin-left: 80px;
   }
 }

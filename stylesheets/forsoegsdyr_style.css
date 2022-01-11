@@ -437,6 +437,7 @@ footer .column a:hover {
     transition: all 0.5s ease;
     padding: 2vh;
     z-index: 30;
+    max-width: 250px;
   }
 
   header .nav_links:hover {

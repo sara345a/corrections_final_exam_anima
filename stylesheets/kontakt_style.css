@@ -457,6 +457,7 @@ footer .column a:hover {
     opacity: 1;
     transition: all 0.5s ease;
     padding: 2vh;
+    max-width: 250px;
   }
 
   header .nav_links:hover {
@@ -511,11 +512,6 @@ footer .column a:hover {
     bottom: 100px;
     text-align: unset;
     left: 50px;
-  }
-
-  header .nav_container.active {
-    width: 30%;
-    max-height: 10px;
   }
 
   header .search {

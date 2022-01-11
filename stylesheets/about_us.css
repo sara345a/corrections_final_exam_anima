@@ -415,6 +415,7 @@ footer .column a:hover {
     opacity: 1;
     transition: all 0.5s ease;
     padding: 2vh;
+    max-width: 250px;
   }
 
   header .nav_links:hover {
@@ -470,11 +471,6 @@ footer .column a:hover {
     left: 50px;
   }
 
-  header .nav_container.active {
-    width: 30%;
-    max-height: 10px;
-  }
-
   header .search {
     max-width: 50px;
     margin-bottom: unset;
@@ -497,6 +493,7 @@ footer .column a:hover {
     gap: 10%;
     padding-left: 5%;
     padding-right: 5%;
+    margin-top: -40px;
   }
 
   .two-third_left {
@@ -595,6 +592,10 @@ footer .column a:hover {
   .timeline_banner {
     padding-top: 5%;
     margin-bottom: 5%;
+  }
+
+  .two-third {
+    margin-top: -70px;
   }
 }
 
