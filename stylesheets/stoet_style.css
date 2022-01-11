@@ -152,6 +152,10 @@ header .nav_links:hover {
   transition: all 0.1s ease-out;
 }
 
+header .current_position a {
+  color: var(--color-red);
+}
+
 button {
   color: white;
   background-color: var(--color-red);
